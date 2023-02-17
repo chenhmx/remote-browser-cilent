@@ -285,7 +285,7 @@
     "hooks": {
       "pre-commit": "lint-staged",
       "post-merge": "install-changed",
-      "pot-commit": "exec < /dev/tty && node webpack/check-version.js"
+      "post-commit": "exec < /dev/tty && node webpack/check-version.js"
     }
   },
   "lint-staged": {
