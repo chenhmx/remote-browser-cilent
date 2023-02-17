@@ -1,7 +1,7 @@
 {
-  "name": "pro-react-admin",
+  "name": "remote-browser-cilent",
   "version": "3.0.0",
-  "description": "pro-react-admin",
+  "description": "远程浏览器客户端",
   "keywords": [
     "React",
     "JSX",
@@ -15,7 +15,7 @@
     "Bit.dev",
     "Bit.cloud"
   ],
-  "homepage": "https://wkylin.github.io/pro-react-admin",
+  "homepage": "https://github.com/chenhmx/remote-browser-cilent",
   "main": "index.js",
   "sideEffects": true,
   "scripts": {
@@ -78,17 +78,17 @@
     "clean:lock": "rm -rf package-lock.json yarn.lock",
     "clean:dist": "rm -rf ./dist"
   },
-  "author": "wkylin",
+  "author": "chenhm",
   "contributors": [
     {
-      "name": "wkylin",
-      "email": "wkylin.w@gmail.com",
+      "name": "chenhm",
+      "email": "chenhmx@163.com",
       "url": "https://github.com/orgs/aresray/teams"
     }
   ],
   "bugs": {
-    "url": "https://github.com/wkylin/pro-react-admin/issues",
-    "email": "wkylin.w@gmail.com"
+    "url": "https://github.com/chenhmx/remote-browser-cilent/issues",
+    "email": "chenhmx@163.com"
   },
   "license": "MIT",
   "devDependencies": {
@@ -285,7 +285,7 @@
     "hooks": {
       "pre-commit": "lint-staged",
       "post-merge": "install-changed",
-      "post-commit": "exec < /dev/tty && node webpack/check-version.js"
+      "pot-commit": "exec < /dev/tty && node webpack/check-version.js"
     }
   },
   "lint-staged": {

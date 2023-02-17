@@ -1,4 +1,4 @@
-# Pro React Admin
+# remote-browser-cilent
 
 ![check-status](https://img.shields.io/github/checks-status/wkylin/pro-react-admin/main 'check-status')
 ![build status](https://img.shields.io/github/workflow/status/wkylin/pro-react-admin/CodeQL 'build status')
