@@ -28,7 +28,14 @@ const devWebpackConfig = merge(common, {
   devServer: {
     // disableHostCheck: true,
     allowedHosts: 'all',
-    historyApiFallback: true,
+    historyApiFallback: {
+      rewrites: [
+        {
+          from: /.*/g,
+          to: '/mobile.html',
+        },
+      ],
+    },
     client: {
       logging: 'error',
       progress: true,
@@ -41,7 +48,7 @@ const devWebpackConfig = merge(common, {
       directory: path.join(__dirname, '../public'),
     },
     compress: true,
-    open: true,
+    open: ['/mobile.html'],
     // server: 'spdy',
     // server: 'https',
     hot: true,

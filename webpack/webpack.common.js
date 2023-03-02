@@ -48,6 +48,7 @@ switch (process.env.BUILD_GOAL) {
 const config = {
   entry: {
     app: `${paths.src}/index.tsx`,
+    mobile: `${paths.src}/mobile/index.tsx`,
   },
   output: {
     path: paths.build,
@@ -94,7 +95,34 @@ const config = {
       title: isDev ? 'Pro React Dev' : 'Pro React',
       template: `${paths.public}/index.html`,
       favicon: `${paths.public}/favicon.ico`,
+      chunks: ['app'],
       filename: 'index.html',
+      inject: 'body',
+      hash: true,
+      cache: false,
+      minify: isDev
+        ? false
+        : {
+            removeAttributeQuotes: true,
+            collapseWhitespace: true,
+            removeComments: true,
+            collapseBooleanAttributes: true,
+            collapseInlineTagWhitespace: true,
+            removeRedundantAttributes: true,
+            removeScriptTypeAttributes: true,
+            removeStyleLinkTypeAttributes: true,
+            minifyCSS: true,
+            minifyJS: true,
+            minifyURLs: true,
+            useShortDoctype: true,
+          },
+    }),
+    new HtmlWebpackPlugin({
+      title: isDev ? 'Mobile Dev' : 'Mobile',
+      template: `${paths.public}/mobile.html`,
+      chunks: ['mobile'],
+      favicon: `${paths.public}/favicon.ico`,
+      filename: 'mobile.html',
       inject: 'body',
       hash: true,
       cache: false,
@@ -162,6 +190,7 @@ const config = {
       {
         test: /\.less$/i,
         // include: [path.resolve(__dirname, 'src/styles')],
+        exclude: /node_modeules/,
         use: [
           'style-loader',
           {
@@ -204,6 +233,7 @@ const config = {
               sourceMap: true,
             },
           },
+          'less-loader',
         ],
       },
       {
