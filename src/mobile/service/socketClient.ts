@@ -24,8 +24,8 @@ export default class SocketClient {
     })
   }
 
-  public createRoom(browserWSEndpoint: string, url: string) {
-    this.connectSocket.emit('create room', browserWSEndpoint, url, (response: string) => {
+  public createRoom(browserWSEndpoint: string, url: string, currentTableNumber: number) {
+    this.connectSocket.emit('create room', browserWSEndpoint, url, currentTableNumber, (response: string) => {
       console.log(response)
     })
   }

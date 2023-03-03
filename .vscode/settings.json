@@ -28,6 +28,6 @@
     "tryer",
     "urlparams"
   ],
-  "files.autoSave": "onWindowChange",
+  "files.autoSave": "onFocusChange",
   "npm-scripts.showStartNotification": false
 }
